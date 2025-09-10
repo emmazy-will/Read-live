@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Book-themed color palette */
+    --background: 35 25% 98%;
+    --foreground: 30 20% 15%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 30 20% 15%;
+
+    --primary: 35 65% 35%;
+    --primary-foreground: 35 25% 98%;
+    --primary-glow: 35 85% 55%;
+
+    --secondary: 35 40% 90%;
+    --secondary-foreground: 30 20% 25%;
+
+    --muted: 35 25% 95%;
+    --muted-foreground: 30 15% 50%;
+
+    --accent: 45 75% 60%;
+    --accent-foreground: 30 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 25% 88%;
+    --input: 35 25% 92%;
+    --ring: 35 65% 35%;
+
+    /* Reading mode colors */
+    --reader-background: 42 45% 97%;
+    --reader-text: 30 25% 20%;
+    --reader-accent: 35 65% 35%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(35 75% 85%), hsl(45 85% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 65% 35%), hsl(45 75% 45%));
+
+    /* Shadows */
+    --shadow-book: 0 4px 20px -4px hsl(var(--primary) / 0.2);
+    --shadow-elevated: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+    --shadow-reader: 0 2px 15px -3px hsl(30 20% 15% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark book-themed colors */
+    --background: 30 15% 8%;
+    --foreground: 35 25% 92%;
+
+    --card: 30 20% 10%;
+    --card-foreground: 35 25% 92%;
+
+    --popover: 30 20% 10%;
+    --popover-foreground: 35 25% 92%;
+
+    --primary: 35 75% 65%;
+    --primary-foreground: 30 15% 8%;
+    --primary-glow: 35 85% 75%;
+
+    --secondary: 30 20% 18%;
+    --secondary-foreground: 35 25% 85%;
+
+    --muted: 30 15% 15%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 45 75% 65%;
+    --accent-foreground: 30 15% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 35 25% 92%;
+
+    --border: 30 20% 20%;
+    --input: 30 20% 15%;
+    --ring: 35 75% 65%;
+
+    /* Dark reading mode */
+    --reader-background: 30 15% 12%;
+    --reader-text: 35 25% 88%;
+    --reader-accent: 35 75% 65%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(30 25% 15%), hsl(35 35% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 75% 65%), hsl(45 85% 75%));
+
+    /* Dark shadows */
+    --shadow-book: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
+    --shadow-reader: 0 2px 15px -3px hsl(0 0% 0% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
